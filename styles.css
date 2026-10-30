@@ -52,7 +52,7 @@ body::before {
   pointer-events: none;
   background-image:
     linear-gradient(rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.9)),
-    url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=70");
+    url("images/bg-pattern.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.35;
@@ -222,7 +222,7 @@ input {
   position: absolute;
   inset: 0;
   background:
-    url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=75")
+    url("images/hero-bg.jpg")
       center / cover no-repeat;
   transform: translate3d(0, 0, 0) scale(1.06);
   will-change: transform;

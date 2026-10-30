@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORGE — Премиальный мужской барбершоп</title>
+  <meta name="description" content="Премиальный барбершоп FORGE. Стрижка как ритуал, моделирование бороды, королевское бритьё. Онлайн-запись и опытные мастера.">
+  <meta name="theme-color" content="#08080a">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Open Graph / Мессенджеры -->
+  <meta property="og:title" content="FORGE — Премиальный мужской барбершоп">
+  <meta property="og:description" content="Стрижка как ритуал. Чёткие линии, чистая работа, опытные мастера. Запишитесь онлайн.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=75">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <header class="header">
+    <a href="#top" class="logo">FORGE</a>
+    <nav class="nav" aria-label="Главная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#barbers">Мастера</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#booking">Запись</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+79991234567" class="header__phone" aria-label="Позвонить в барбершоп">
+        <svg class="header__phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>+7 (999) 123-45-67</span>
+      </a>
+      <a href="#booking" class="btn btn--gold btn--header-cta">Запись</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true"></div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Premium barbershop</p>
+        <p class="hero__brand">FORGE</p>
+        <h1 class="hero__title">Стрижка как ритуал</h1>
+        <p class="hero__lead">Премиальный барбершоп для тех, кто ценит форму, характер и деталь.</p>
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--gold">Записаться онлайн</a>
+          <a href="https://t.me/your_barbershop" target="_blank" rel="noopener noreferrer" class="btn btn--telegram">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+            </svg>
+            <span>Запись в Telegram</span>
+          </a>
+          <a href="#services" class="btn btn--ghost">Смотреть услуги</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services reveal" id="services">
+      <div class="section-head">
+        <p class="section-label">Прайс</p>
+        <h2 class="section-title">Услуги</h2>
+        <p class="section-text">Чёткие линии, чистая работа, без лишнего шума.</p>
+      </div>
+
+      <ul class="service-grid">
+        <li class="service-card" onclick="selectService('Мужская стрижка')">
+          <div class="service-card__top">
+            <span class="service-card__index" aria-hidden="true">01</span>
+            <span class="service-card__time">⏱ 50 мин</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Мужская стрижка</h3>
+            <p class="service-card__desc">Классика или fade — под вашу форму головы</p>
+            <p class="service-card__details">Включено: консультация, мытьё головы до и после, стрижка, премиум-стайлинг.</p>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">1 800 ₽</span>
+            <a href="#booking" class="service-card__btn">Выбрать →</a>
+          </div>
+        </li>
+        <li class="service-card" onclick="selectService('Стрижка + борода')">
+          <div class="service-card__top">
+            <span class="service-card__index" aria-hidden="true">02</span>
+            <span class="service-card__time">⏱ 80 мин</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Стрижка + борода</h3>
+            <p class="service-card__desc">Полный образ: контур, объём, финиш</p>
+            <p class="service-card__details">Включено: стрижка, распаривание компрессом, оформление контуров бритвой, масло.</p>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">2 600 ₽</span>
+            <a href="#booking" class="service-card__btn">Выбрать →</a>
+          </div>
+        </li>
+        <li class="service-card" onclick="selectService('Моделирование бороды')">
+          <div class="service-card__top">
+            <span class="service-card__index" aria-hidden="true">03</span>
+            <span class="service-card__time">⏱ 35 мин</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Моделирование бороды</h3>
+            <p class="service-card__desc">Форма, бритьё контуров, уход</p>
+            <p class="service-card__details">Включено: распаривание, чёткие контуры лезвием, стрижка триммером и ножницами, бальзам.</p>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">1 200 ₽</span>
+            <a href="#booking" class="service-card__btn">Выбрать →</a>
+          </div>
+        </li>
+        <li class="service-card" onclick="selectService('Королевское бритьё')">
+          <div class="service-card__top">
+            <span class="service-card__index" aria-hidden="true">04</span>
+            <span class="service-card__time">⏱ 50 мин</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Королевское бритьё</h3>
+            <p class="service-card__desc">Горячее полотенце, опасная бритва, масло</p>
+            <p class="service-card__details">Включено: двойное распаривание, массаж лица с пеной, опасная бритва, охлаждающий компресс.</p>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">2 200 ₽</span>
+            <a href="#booking" class="service-card__btn">Выбрать →</a>
+          </div>
+        </li>
+        <li class="service-card" onclick="selectService('Детская стрижка')">
+          <div class="service-card__top">
+            <span class="service-card__index" aria-hidden="true">05</span>
+            <span class="service-card__time">⏱ 40 мин</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Детская стрижка</h3>
+            <p class="service-card__desc">До 12 лет, спокойно и аккуратно</p>
+            <p class="service-card__details">Включено: бережный подход, подбор удобной формы под тип волос, лёгкий стайлинг.</p>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">1 200 ₽</span>
+            <a href="#booking" class="service-card__btn">Выбрать →</a>
+          </div>
+        </li>
+        <li class="service-card" onclick="selectService('Укладка / камуфляж')">
+          <div class="service-card__top">
+            <span class="service-card__index" aria-hidden="true">06</span>
+            <span class="service-card__time">⏱ 25 мин</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Укладка / камуфляж</h3>
+            <p class="service-card__desc">Финиш образа или мягкий тон</p>
+            <p class="service-card__details">Включено: маскировка седины бороды или волос естественным безаммиачным тоном либо стайлинг.</p>
+          </div>
+          <div class="service-card__foot">
+            <span class="service-card__price">900 ₽</span>
+            <a href="#booking" class="service-card__btn">Выбрать →</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="philosophy reveal" id="philosophy">
+      <div class="section-head section-head--center">
+        <p class="section-label">Кодекс</p>
+        <h2 class="section-title">Философия FORGE</h2>
+        <p class="section-text">Не просто стрижка — ритуал формы, характера и паузы.</p>
+      </div>
+
+      <ul class="philosophy-grid">
+        <li class="glass-card">
+          <span class="glass-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M16 8h16l4 10H12l4-10Z" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M18 18c0 8 2.5 16 6 22 3.5-6 6-14 6-22" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M14 28h20" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </span>
+          <h3>Премиальная косметика</h3>
+          <p>Масла, тоники и пасты, которые держат форму и не убивают текстуру.</p>
+        </li>
+        <li class="glass-card">
+          <span class="glass-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="16" r="6" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M10 38c1.8-8 7.2-12 14-12s12.2 4 14 12" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M32 14c2.2-0.6 5 .6 6.2 3.2" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </span>
+          <h3>Опытные мастера</h3>
+          <p>Барберы, которые читают форму головы и режут без лишнего шума.</p>
+        </li>
+        <li class="glass-card">
+          <span class="glass-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M12 20h24v16H12V20Z" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M16 20V16a8 8 0 0 1 16 0v4" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M20 28h8" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </span>
+          <h3>Атмосфера и бар</h3>
+          <p>Тёмный зал, винил и бокал, пока мастер собирает ваш образ.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="barbers reveal" id="barbers">
+      <div class="section-head section-head--center">
+        <p class="section-label">Команда</p>
+        <h2 class="section-title">Мастера FORGE</h2>
+        <p class="section-text">Барберы с опытом от 4 до 9 лет, знающие геометрию лица и форму чистого среза.</p>
+      </div>
+
+      <ul class="barber-grid">
+        <li class="barber-card">
+          <div class="barber-card__media">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=75" alt="Алексей Громов" loading="lazy" decoding="async">
+            <span class="barber-card__rank">Шеф-барбер</span>
+          </div>
+          <div class="barber-card__content">
+            <div class="barber-card__header">
+              <h3>Алексей Громов</h3>
+              <span class="barber-card__exp">Стаж 9 лет</span>
+            </div>
+            <p class="barber-card__spec">Сложные fade-переходы любой высоты, удлинённая классика и точная архитектура бороды опасной бритвой.</p>
+            <a href="#booking" class="btn btn--outline-gold btn--sm" onclick="selectMaster('Алексей Громов')">Записаться к Алексею →</a>
+          </div>
+        </li>
+
+        <li class="barber-card">
+          <div class="barber-card__media">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=75" alt="Марк Воронов" loading="lazy" decoding="async">
+            <span class="barber-card__rank">Топ-барбер</span>
+          </div>
+          <div class="barber-card__content">
+            <div class="barber-card__header">
+              <h3>Марк Воронов</h3>
+              <span class="barber-card__exp">Стаж 6 лет</span>
+            </div>
+            <p class="barber-card__spec">Английская классика, текстурные кропы, работа ножницами и подбор индивидуального стайлинга.</p>
+            <a href="#booking" class="btn btn--outline-gold btn--sm" onclick="selectMaster('Марк Воронов')">Записаться к Марку →</a>
+          </div>
+        </li>
+
+        <li class="barber-card">
+          <div class="barber-card__media">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=75" alt="Денис Ковалёв" loading="lazy" decoding="async">
+            <span class="barber-card__rank">Барбер-стилист</span>
+          </div>
+          <div class="barber-card__content">
+            <div class="barber-card__header">
+              <h3>Денис Ковалёв</h3>
+              <span class="barber-card__exp">Стаж 4 года</span>
+            </div>
+            <p class="barber-card__spec">Мастер королевского бритья с компрессами, чистых контуров и натурального камуфляжа седины.</p>
+            <a href="#booking" class="btn btn--outline-gold btn--sm" onclick="selectMaster('Денис Ковалёв')">Записаться к Денису →</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="portfolio reveal" id="portfolio">
+      <div class="section-head">
+        <p class="section-label">Работы</p>
+        <h2 class="section-title">Портфолио</h2>
+        <p class="section-text">Топовые стрижки зала — листайте стрелками или свайпом.</p>
+      </div>
+
+      <div class="portfolio-shell">
+        <div class="swiper portfolio-swiper">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=75" alt="Классический fade" width="600" height="750" decoding="async">
+              <div class="slide-caption">
+                <p class="slide-caption__tag">Слайд 01</p>
+                <h3>Low Fade</h3>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=800&q=75" alt="Моделирование бороды" width="600" height="750" loading="lazy" decoding="async">
+              <div class="slide-caption">
+                <p class="slide-caption__tag">Слайд 02</p>
+                <h3>Beard Trim</h3>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=75" alt="Премиальный стайлинг" width="600" height="750" loading="lazy" decoding="async">
+              <div class="slide-caption">
+                <p class="slide-caption__tag">Слайд 03</p>
+                <h3>Premium Styling</h3>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=75" alt="Королевское бритьё" width="600" height="750" loading="lazy" decoding="async">
+              <div class="slide-caption">
+                <p class="slide-caption__tag">Слайд 04</p>
+                <h3>Royal Shave</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="portfolio-nav">
+          <button type="button" class="slider-btn portfolio-prev" aria-label="Назад">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <path d="M28 12 16 24l12 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/>
+            </svg>
+          </button>
+          <button type="button" class="slider-btn portfolio-next" aria-label="Вперёд">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <path d="m20 12 12 12-12 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking reveal" id="booking">
+      <div class="booking__inner">
+        <div class="section-head section-head--center">
+          <p class="section-label">Контакт</p>
+          <h2 class="section-title">Запись</h2>
+          <p class="section-text">Оставьте имя и телефон — перезвоним и подтвердим время.</p>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="field">
+            <label for="service">Услуга</label>
+            <select id="service" name="service">
+              <option value="Мужская стрижка">Мужская стрижка — 1 800 ₽ (50 мин)</option>
+              <option value="Стрижка + борода">Стрижка + борода — 2 600 ₽ (80 мин)</option>
+              <option value="Моделирование бороды">Моделирование бороды — 1 200 ₽ (35 мин)</option>
+              <option value="Королевское бритьё">Королевское бритьё — 2 200 ₽ (50 мин)</option>
+              <option value="Детская стрижка">Детская стрижка — 1 200 ₽ (40 мин)</option>
+              <option value="Укладка / камуфляж">Укладка / камуфляж — 900 ₽ (25 мин)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="master">Мастер</label>
+            <select id="master" name="master">
+              <option value="Любой свободный мастер">Любой свободный мастер</option>
+              <option value="Алексей Громов">Алексей Громов (Шеф-барбер)</option>
+              <option value="Марк Воронов">Марк Воронов (Топ-барбер)</option>
+              <option value="Денис Ковалёв">Денис Ковалёв (Барбер-стилист)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+          </div>
+          <button type="submit" class="btn btn--gold btn--block">Забронировать время</button>
+
+          <div class="booking-alt">
+            <div class="booking-alt__divider"><span>или без звонка</span></div>
+            <div class="booking-alt__grid">
+              <a href="https://t.me/your_barbershop" target="_blank" rel="noopener noreferrer" class="btn-msg btn-msg--tg">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+                <span>Записаться в Telegram</span>
+              </a>
+              <a href="https://wa.me/79991234567" target="_blank" rel="noopener noreferrer" class="btn-msg btn-msg--wa">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.78 14.04c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.14.12-3.69-.93-3.26-1.35-5.35-4.66-5.51-4.88-.16-.21-1.33-1.77-1.33-3.37 0-1.6.84-2.39 1.14-2.71.3-.32.65-.4.87-.4.22 0 .43.01.62.01.2 0 .46-.07.72.54.26.63.89 2.18.97 2.34.08.16.14.35.03.56-.11.22-.16.35-.32.54-.16.19-.34.42-.48.56-.16.16-.33.34-.14.66.19.32.84 1.38 1.8 2.24 1.24 1.1 2.28 1.44 2.61 1.6.33.16.52.14.71-.08.2-.22.84-.98 1.07-1.32.22-.34.45-.28.75-.17.3.11 1.91.9 2.24 1.07.33.16.55.24.63.38.08.13.08.78-.16 1.46z"/></svg>
+                <span>Запись в WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__brand">FORGE</p>
+    <p class="footer__meta">Ежедневно 10:00–22:00 · ул. Примерная, 12</p>
+    <nav class="footer__social" aria-label="Социальные сети">
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://t.me" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a href="https://vk.com" target="_blank" rel="noopener noreferrer">VK</a>
+    </nav>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var reveals = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-in");
+            io.unobserve(entry.target);
+          });
+        }, { threshold: 0.02, rootMargin: "0px 0px 80px 0px" });
+        reveals.forEach(function (node) { io.observe(node); });
+      } else {
+        reveals.forEach(function (node) { node.classList.add("is-in"); });
+      }
+
+      if (typeof Swiper === "undefined") return;
+
+      var isMobile = window.innerWidth < 768;
+
+      new Swiper(".portfolio-swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        speed: 400,
+        touchRatio: 1.1,
+        resistanceRatio: 0.85,
+        coverflowEffect: {
+          rotate: isMobile ? 0 : 18,
+          stretch: isMobile ? 0 : -14,
+          depth: isMobile ? 70 : 200,
+          modifier: 1,
+          slideShadows: false
+        },
+        navigation: {
+          nextEl: ".portfolio-next",
+          prevEl: ".portfolio-prev"
+        }
+      });
+
+      // Phone format mask
+      var phoneInput = document.getElementById("phone");
+      if (phoneInput) {
+        phoneInput.addEventListener("input", function (e) {
+          var val = e.target.value.replace(/\D/g, "");
+          if (!val) {
+            e.target.value = "";
+            return;
+          }
+          if (val[0] === "7" || val[0] === "8") {
+            val = val.substring(1);
+          }
+          var formatted = "+7 (";
+          if (val.length > 0) formatted += val.substring(0, 3);
+          if (val.length >= 3) formatted += ") " + val.substring(3, 6);
+          if (val.length >= 6) formatted += "-" + val.substring(6, 8);
+          if (val.length >= 8) formatted += "-" + val.substring(8, 10);
+          e.target.value = formatted;
+        });
+      }
+
+      // Helper for quick selection
+      window.selectService = function(name) {
+        var select = document.getElementById("service");
+        if (select) {
+          for (var i = 0; i < select.options.length; i++) {
+            if (select.options[i].value.indexOf(name) !== -1) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        }
+        var booking = document.getElementById("booking");
+        if (booking) {
+          booking.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      window.selectMaster = function(name) {
+        var select = document.getElementById("master");
+        if (select) {
+          for (var i = 0; i < select.options.length; i++) {
+            if (select.options[i].value.indexOf(name) !== -1) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        }
+        var booking = document.getElementById("booking");
+        if (booking) {
+          booking.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      // AJAX form submission without page reload
+      var bookingForm = document.getElementById("bookingForm");
+      if (bookingForm) {
+        bookingForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var nameInput = document.getElementById("name");
+          var serviceInput = document.getElementById("service");
+          var masterInput = document.getElementById("master");
+
+          var phone = phoneInput ? phoneInput.value.trim() : "";
+          var name = nameInput ? nameInput.value.trim() : "";
+          var service = serviceInput ? serviceInput.value : "";
+          var master = masterInput ? masterInput.value : "";
+
+          if (!name || !phone) return;
+
+          var submitBtn = bookingForm.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Бронируем время...";
+          }
+
+          var tgText = encodeURIComponent(
+            "Здравствуйте! Заявка на стрижку в FORGE:\n" +
+            "• Клиент: " + name + "\n" +
+            "• Телефон: " + phone + "\n" +
+            "• Услуга: " + service + "\n" +
+            "• Мастер: " + master
+          );
+          var waText = encodeURIComponent(
+            "Здравствуйте! Заявка на стрижку в FORGE: " + name + " (" + phone + "), Услуга: " + service + ", Мастер: " + master
+          );
+
+          var showConfirmation = function () {
+            bookingForm.innerHTML =
+              '<div style="text-align: center; padding: 1.5rem 0.5rem;">' +
+              '<div style="width: 54px; height: 54px; margin: 0 auto 1.2rem; border-radius: 50%; background: rgba(212, 175, 55, 0.15); border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: var(--gold-light);">✓</div>' +
+              '<h3 style="font-family: var(--font-display); font-size: 2.1rem; letter-spacing: 0.08em; margin-bottom: 0.6rem; color: var(--gold-light);">Время забронировано</h3>' +
+              '<p style="color: var(--text); font-size: 1.05rem; line-height: 1.5; margin-bottom: 0.6rem;">Спасибо, <strong>' + escapeHtml(name) + '</strong>!</p>' +
+              '<p style="color: var(--muted); font-size: 0.92rem; line-height: 1.5; margin-bottom: 0.5rem;">Услуга: <strong style="color: var(--text);">' + escapeHtml(service) + '</strong><br>Мастер: <strong style="color: var(--text);">' + escapeHtml(master) + '</strong></p>' +
+              '<p style="color: var(--muted); font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.3rem;">Мы свяжемся с вами по номеру <strong style="color: var(--text);">' + escapeHtml(phone) + '</strong> в течение 10 минут.</p>' +
+              '<div style="display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.3rem;">' +
+              '<a href="https://t.me/your_barbershop?text=' + tgText + '" target="_blank" rel="noopener noreferrer" class="btn btn--telegram" style="width: 100%; justify-content: center; font-size: 0.72rem; padding: 0.7rem; text-decoration: none;">Подтвердить в Telegram →</a>' +
+              '<a href="https://wa.me/79991234567?text=' + waText + '" target="_blank" rel="noopener noreferrer" class="btn-msg btn-msg--wa" style="width: 100%; justify-content: center; font-size: 0.72rem; padding: 0.7rem; text-decoration: none; border-radius: 4px;">Подтвердить в WhatsApp →</a>' +
+              '</div>' +
+              '<button type="button" class="btn btn--ghost" onclick="location.reload()" style="font-size: 0.72rem; padding: 0.7rem 1.6rem;">Записаться ещё раз</button>' +
+              '</div>';
+          };
+
+          fetch("/api/booking", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: name, phone: phone, service: service, master: master })
+          })
+          .then(showConfirmation)
+          .catch(showConfirmation);
+        });
+      }
+
+      function escapeHtml(str) {
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+      }
+    });
+  </script>
+
+  <!-- Плавающая мобильная панель быстрой связи -->
+  <aside class="mobile-bar" aria-label="Быстрые действия">
+    <a href="tel:+79991234567" class="mobile-bar__link mobile-bar__link--call" aria-label="Позвонить в барбершоп">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Позвонить</span>
+    </a>
+    <a href="#booking" class="mobile-bar__link mobile-bar__link--book">
+      <span>Записаться онлайн</span>
+    </a>
+    <a href="https://t.me/your_barbershop" target="_blank" rel="noopener noreferrer" class="mobile-bar__link mobile-bar__link--tg" aria-label="Записаться через Telegram">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+      <span>Telegram</span>
+    </a>
+  </aside>
+    });
+  </script>
+</body>
+</html>
